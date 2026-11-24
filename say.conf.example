@@ -1,0 +1,19 @@
+# Copy to say.conf (gitignored) for settings that hold however say is launched: a
+# terminal, a button, a broker. The real environment wins over this file. All optional.
+
+# SAY_VOICE=af_heart    # default voice; `say --list-voices` for the rest
+# SAY_RATE=1.0          # default speed multiplier
+# SAY_IDLE_MIN=60       # the server exits after this many idle minutes (480 = a workday warm)
+# SAY_POPUP=1           # 0 = no control popup
+# SAY_PORT=47337        # where the server listens on 127.0.0.1
+
+# A long-lived local process that starts the voice server outside your terminal. Only
+# needed if your terminal kills everything a tab started when the tab closes (Orca does).
+# POST to it must run `<venv python> say.py --start` and answer {"ok": true}.
+# SAY_BROKER=http://127.0.0.1:8080/say/start
+
+# The orca CLI for say-last, if it is not in the default install spot or on PATH.
+# SAY_ORCA=/path/to/orca
+
+# Any other KEY=VALUE here is passed into the server's environment too (a process label
+# your dashboard reads, a CUDA_VISIBLE_DEVICES, ...).

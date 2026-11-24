@@ -1,0 +1,5 @@
+.venv/
+.run/
+*.wav
+__pycache__/
+say.conf
